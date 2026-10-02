@@ -53,7 +53,7 @@ suspend fun procesarPago(monto: Double): EstadoReserva {
     delay(2000)
 
     return if (monto > 20000.0) {
-        EstadoReserva.Error("Pago rechazado: El monto supera el límite diario permitido de $20000")
+        EstadoReserva.Error("Pago rechazado: El monto supera el limite diario permitido de $20000")
     } else {
         EstadoReserva.Exito("Pago aprobado con éxito por un total de $$monto.")
     }
